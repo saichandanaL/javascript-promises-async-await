@@ -157,7 +157,7 @@ describe('Module 8', () => {
             _.get(node, 'declarations[0].id.name', '') ===
             'getBooksOrMoviesAsync'
           ) {
-            console.dir(node, dirOpts);
+            // console.dir(node, dirOpts);
             func.node = node;
           }
         },
