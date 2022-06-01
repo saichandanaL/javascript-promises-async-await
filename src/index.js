@@ -1,4 +1,4 @@
-import {fetchWithTimeout} from './services.json'
+import fetchWithTimeout from './services.json'
 
 const movies = require('./data/movies.json');
 
