@@ -172,7 +172,7 @@ describe('Module 8', () => {
           if (
             _.get(node, 'elements[0].callee.name', '') === 'asyncFetchBookss'
           ) {
-            console.dir(node, dirOpts);
+            // console.dir(node, dirOpts);
             func.misspelledFunction = node;
           }
         },
