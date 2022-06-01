@@ -1,7 +1,5 @@
-import { result } from 'lodash';
 import {fetchWithTimeout ,fetchMovies , fetchBooks } from './services';
-
-// const movies = require('./data/movies.json');
+const movies = require('./data/movies.json');
 
 function getBooksAndMovies(){
     return Promise.all([fetchBooks() , fetchMovies()])
@@ -13,4 +11,7 @@ function getBooksAndMovies(){
 }
 
 const getBooksAndMoviesPromise = getBooksAndMovies();
-getBooksAndMoviesPromise.then(results=>console.log('getBooksAndMoviesPromise', results));
+getBooksAndMoviesPromise.then(results=>{
+    console.log('getBooksAndMoviesPromise', results)
+});
+
