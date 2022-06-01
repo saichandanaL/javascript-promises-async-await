@@ -38,14 +38,8 @@ async function getBooksAndMoviesAsync(){
 }
 
 async function getBooksOrMoviesAsync(){
-    try{
-        const values = await Promise.race([asyncFetchBooks() , asyncFetchMovies()]);
-        return values;
-    }
-    catch(error){
-        console.error("Error waiting for the promise race", error);
-        throw error;
-    }
+    const values = await Promise.race([asyncFetchBookss(),asyncFetchMovies()]);
+    return values;
 }
 
 getBooksAndMoviesAsync().then((results)=>{
